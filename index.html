@@ -2,60 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My GG Site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ULIMITE HACKEER</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at top, #0f172a, #020617);
       color: white;
+      overflow-x: hidden;
       text-align: center;
     }
+
+    /* Animated background glow */
+    body::before {
+      content: "";
+      position: fixed;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(34,197,94,0.15), transparent 70%);
+      animation: moveGlow 10s infinite linear;
+      z-index: -1;
+    }
+
+    @keyframes moveGlow {
+      0% { transform: translate(-25%, -25%); }
+      50% { transform: translate(-10%, -10%); }
+      100% { transform: translate(-25%, -25%); }
+    }
+
     header {
-      padding: 40px;
-      font-size: 32px;
-      font-weight: bold;
-      background: #111827;
+      padding: 60px 20px;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-shadow: 0 0 20px #22c55e;
     }
+
     .container {
-      padding: 40px;
-    }
-    .card {
-      background: #1f2937;
       padding: 20px;
-      margin: 20px auto;
-      border-radius: 15px;
-      max-width: 400px;
     }
+
+    .card {
+      background: rgba(31, 41, 55, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 420px;
+      box-shadow: 0 0 25px rgba(34,197,94,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 40px rgba(34,197,94,0.5);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #22c55e;
+    }
+
+    p {
+      opacity: 0.9;
+    }
+
     button {
-      padding: 10px 20px;
+      margin-top: 15px;
+      padding: 12px 25px;
       border: none;
-      border-radius: 10px;
-      background: #22c55e;
-      color: black;
+      border-radius: 12px;
       font-weight: bold;
+      font-size: 16px;
       cursor: pointer;
+      background: linear-gradient(45deg, #22c55e, #4ade80);
+      color: black;
+      box-shadow: 0 0 15px #22c55e;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px #22c55e;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 14px;
+      opacity: 0.6;
     }
   </style>
 </head>
 <body>
 
 <header>
-  MY GAMING SITE
+  ULIMITE HACKEER ⚡
 </header>
 
 <div class="container">
+
   <div class="card">
-    <h2>About Me</h2>
-    <p>I am a gamer. Welcome to my site!</p>
+    <h2>👤 About Me</h2>
+    <p>Welcome to my official gaming site. I build, play, and dominate.</p>
   </div>
 
   <div class="card">
-    <h2>My Links</h2>
-    <button onclick="window.location.href='https://discord.gg/Jzg6q2HD'">Join Discord</button>
+    <h2>🎮 Join My Community</h2>
+    <p>Click below to join my Discord server</p>
+    <button onclick="window.location.href='https://discord.gg/Jzg6q2HD'">
+      🚀 Join Discord
+    </button>
   </div>
+
+  <div class="card">
+    <h2>🔥 Status</h2>
+    <p>Online and ready to play.</p>
+  </div>
+
 </div>
+
+<footer>
+  © 2026 ULIMITE HACKEER
+</footer>
 
 </body>
 </html>
